@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <td>${student.email}</td>
                 <td>${student.contact}</td>
                 <td>
-                    <button class="action-button edit" onclick="editStudent(${index})"><i class="fa-sharp fa-solid fa-marker"></i></button>
-                    <button class="action-button delete" onclick="deleteStudent(${index})"><i class="fa-solid fa-trash"></i></button>
+                    <button onclick="editStudent(${index})"><i class="fa-sharp fa-solid fa-marker"></i></button>
+                    <button onclick="deleteStudent(${index})"><i class="fa-solid fa-trash"></i></button>
                 </td>
             `;
             studentTableBody.appendChild(row);
