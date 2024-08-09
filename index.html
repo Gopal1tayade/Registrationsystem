@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gopal Tayade" />
+    <meta name="Registration" content="basic registration system using the tailwind css  javascript and html">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <script src="https://kit.fontawesome.com/e5482bf773.js" crossorigin="anonymous"></script>
+    <title>Student Registration System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .trclass {
+            display: flex;
+            gap: 3.4rem;
+            margin-left: -4rem;
+            border: 1px solid black;
+            margin-top: 2px;
+            padding: 3px;
+        }
+
+        .trclasss {
+            display: flex;
+            gap: 5rem;
+            margin-left: -4rem;
+            border: 1px solid black;
+            margin-top: 2px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-violet-500 to-fuchsia-500">
+
+    <header>
+        <h1 class="font-extrabold text-center text-5xl mt-8">Student Registration System</h1>
+        <p class="text-center text-2xl mt-1">Register students and manage their records easily.</p>
+    </header>
+
+    <main class="grid grid-cols-2 gap-16 mt-10">
+        <!-- Registration from -->
+        <section id="registration-form" class="ml-8">
+            <h2 class="ml-20 mb-3 font-bold text-xl">Register a New Student</h2>
+            <form id="studentForm" class="flex flex-col">
+                <label for="name" class="text-lg mb-1">Student Name:</label>
+                <input type="text" class="w-1/2 p-2 ml-3 rounded" id="name" name="name" required>
+
+                <label for="studentId" class="text-lg mb-1">Student ID:</label>
+                <input type="text" class="w-1/2 p-2 ml-3 rounded" id="studentId" name="studentId" required>
+
+                <label for="email" class="text-lg mb-1">Email ID:</label>
+                <input type="email" class="w-1/2 p-2 ml-3 rounded" id="email" name="email" required>
+
+                <label for="contact" class="text-lg mb-1">Contact No.:</label>
+                <input type="text" class="w-1/2 p-2 ml-3 rounded" id="contact" name="contact" required>
+
+                <button type="submit"
+                    class="w-1/4 mt-5 ml-16 p-2 rounded-md text-lg text-black font-bold hover:text-white hover:bg-black bg-pink-600 transition ease-in-out delay-150">Register</button>
+            </form>
+        </section>
+
+
+        <!-- Student information Display -->
+
+
+        <section id="display-section" class="-ml-10">
+            <h2 class=" ml-32 mb-3 font-bold text-xl">Registered Students</h2>
+            <table id="studentTable">
+                <thead>
+                    <tr class="trclasss">
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Email ID</th>
+                        <th>Contact No.</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <!-- Student records will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
