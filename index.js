@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Edit student
-    window.editStudent = function(index) {
+    editStudent = function(index) {
         const student = students[index];
         document.getElementById("name").value = student.name;
         document.getElementById("studentId").value = student.studentId;
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Delete student
-    window.deleteStudent = function(index) {
+    deleteStudent = function(index) {
         students.splice(index, 1);
         localStorage.setItem("students", JSON.stringify(students));
         renderStudents();
